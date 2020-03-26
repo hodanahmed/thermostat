@@ -21,6 +21,10 @@ class Thermostat {
   }
 //down function decrement the temperature property
   down() {
+  //Created a guard condition so temperature property doesn't go down unless its > 10
+    if (this.isMinimumTemperature()){
+      return;
+    }
     this.temperature -=1
   }
 //Created a MINIMUM_TEMPERATURE function so it can return a boolean to check if this has been set or not
