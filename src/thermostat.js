@@ -8,7 +8,7 @@ class Thermostat {
 //Adding minimum temperature property as a constant
     this.MINIMUM_TEMPERATURE = 10;
     this.temperature = 20;
-    this.powerSavingModeOn = true;
+    this.powerSavingMode = true;
   }
 
 // I created a new function called getCurrentTemperature which just
@@ -28,13 +28,22 @@ class Thermostat {
     }
     this.temperature -=1
   }
+//Created a switch on PSM mode
+  switchPowerSavingModeOn() {
+    this.powerSavingMode = true;
+  }
+//Created a switch off PSM mode
+  switchPowerSavingModeOff() {
+    this.powerSavingMode = false;
+  }
+
 //Created a MINIMUM_TEMPERATURE function so it can return a boolean to check if this has been set or not
 //the function starts with 'is', it's JS convention similar to ruby's ? as the function returns a boolean
   isMinimumTemperature() {
     return this.temperature === this.MINIMUM_TEMPERATURE;
   }
-// === operator means equal value and equal type
-  isPowerSavingModeOn() {
-    return this.powerSavingModeOn === true;
+// Created a power saving mode
+  isPowerSavingMode() {
+    return this.powerSavingMode;
   }
 };
