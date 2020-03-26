@@ -33,7 +33,7 @@ class Thermostat {
   isMinimumTemperature() {
     return this.temperature === this.MINIMUM_TEMPERATURE;
   }
-
+// === operator means equal value and equal type
   isPowerSavingModeOn() {
     return this.powerSavingModeOn === true;
   }
